@@ -1,0 +1,223 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: .3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    vertical-align: top;
+    background: url(./images/bckgrd.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 150px 20px 60px;
+    font-family: var(--font-family-1);
+}
+
+.header > h2{
+    font-size: 30px;
+    color: plum;
+    text-shadow: 2px 5px 10px #000;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+body > .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#cityname{
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: plum;
+    border: 2px solid #000;
+}
+
+#find{
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: medium;
+    outline: none;
+    border: none;
+    border: 2px solid #000;
+    color: #fff;
+    background-color: plum;
+}
+
+.weather{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    vertical-align: top;
+}
+
+.weather_icon{
+    width: 80%;
+    height: 70vh;
+    border-radius: 50%;
+    filter: drop-shadow(5px 5px 15px plum);
+}
+
+.temp,
+.feelslike,
+.city{
+    position: absolute;
+}
+
+.temp{
+    font-size: 120px;
+    left: 50%;
+    top: 70px;
+    color: #fff;
+    text-shadow: 2px 5px 10px #000;
+}
+
+.city{
+    font-size: 38px;
+    left: 50%;
+    top: 240px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 2px 5px 10px #000;
+}
+
+.details{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.block{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .2);
+    border: 2px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(5px);
+}
+
+.block > img{
+    width: 60px;
+    height: 60px;
+}
+
+.block > i{
+    font-size: 40px;
+}
+
+.block > h3{
+    font-size: 30px;
+    color: #fff;
+    -webkit-text-stroke: .5px #000;
+}
+
+.block > p{
+    font-size: larger;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    body{
+        background: url(./images/bckgrd2.webp) no-repeat center fixed;
+        background-size: cover;
+    }
+
+    .header{
+        width: 100%;
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 25px;
+    }
+
+    .header > h2{
+        font-size: 22px;
+        margin-right: auto;
+    }
+
+    #cityname{
+        width: 220px;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .weather{
+        width: 100%;
+        height: 32vh;
+        padding: 15px;
+    }
+
+    .weather_icon{
+        width: 80%;
+        height: 100%;
+        margin-bottom: 30px;
+    }
+
+    .temp{
+        top: 30px;
+        left: 45%;
+        font-size: 65px;
+    }
+
+    .city{
+        top: 100px;
+        left: 45%;
+        font-size: 23px;
+    }
+
+    .details{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .block{
+        padding: 15px;
+        width: 100%;
+    }
+
+
+    .block > h3{
+        font-size: 22px;
+    }
+
+    .block > p{
+        font-size: 18px;
+    }
+
+}
